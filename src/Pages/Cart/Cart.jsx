@@ -7,10 +7,12 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
+  Flex,
   Text,
   useDisclosure,
 } from '@chakra-ui/react'
 import { FaShoppingCart } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 import useCart from '../../Hooks/useCart'
 import Product from './Product'
@@ -21,29 +23,34 @@ const Cart = () => {
   const total = cart.length
   return (
     <>
-      <Button bgColor="black" onClick={onOpen}>
-        {' '}
-        <FaShoppingCart /> ({total})
-      </Button>{' '}
-      <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
+      <Flex onClick={onOpen} as={Button} colorScheme="black">
+        <FaShoppingCart fontSize="1.5rem" mr="10px" /> ({total})
+      </Flex>
+      <Drawer isOpen={isOpen} size="sm" placement="right" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader>Carrito</DrawerHeader>
           {!!cart.length || (
             <DrawerBody>
-              <Text> No hay productos </Text>
+              <Text> No hay artículos en su carrito de compras. </Text>
             </DrawerBody>
           )}
 
           {!!cart.length && (
             <>
-              <DrawerBody>
-                {cart.map((product) => (
-                  <Product product={product} key={`cartProduct${product.id}`} />
+              <DrawerBody w="100%">
+                {cart.map((info) => (
+                  <Product product={info} key={`cartProduct${info.id}`} />
                 ))}
               </DrawerBody>
               <DrawerFooter display="flex" flexDir="column">
+                <Text>Total: $ {totalCart}</Text>
+
+                <Button mb={3} w="full" colorScheme="facebook">
+                  <Link to="checkOut"> Comprar</Link>
+                </Button>
+
                 <Button
                   variant="outline"
                   mb={3}
@@ -52,7 +59,6 @@ const Cart = () => {
                 >
                   Vaciar Carrito
                 </Button>
-                <Text>Total: {totalCart}</Text>
               </DrawerFooter>
             </>
           )}

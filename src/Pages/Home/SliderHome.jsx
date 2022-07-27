@@ -30,21 +30,22 @@ const SliderHome = () => {
 
   const cards = [
     {
-      title: 'Design Projects 1',
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-      image: 'https://shrinemaidens.tumblr.com/image/97613389360.jpg',
+      title: '',
+      text: '',
+      image:
+        'https://res.cloudinary.com/dpvnqdjzj/image/upload/v1658953764/slider1_2852f73560.jpg?updated_at=2022-07-27T20:29:26.650Z',
     },
     {
-      title: 'Design Projects 2',
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      title: '',
+      text: '',
       image:
-        'https://psychedelicdisaster.tumblr.com/image/621510991529820160.jpg',
+        'https://payload.cargocollective.com/1/5/186208/6775221/nonotakDAYDREAMw_910.jpg',
     },
     {
-      title: 'Design Projects 3',
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      title: '',
+      text: '',
       image:
-        'https://hyperallergic-newspack.s3.amazonaws.com/uploads/2018/01/The-Way-We-Shook-720x893.jpg',
+        'https://payload.cargocollective.com/1/5/186208/13477960/cartierw_1000.jpg',
     },
   ]
 
@@ -98,7 +99,6 @@ const SliderHome = () => {
         {cards.map((card, index) => (
           <Box
             key={index}
-            height={'6xl'}
             position="relative"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"

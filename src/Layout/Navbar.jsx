@@ -1,8 +1,8 @@
 import { Flex, Text } from '@chakra-ui/react'
 import { AiFillFire } from 'react-icons/ai'
-import { FaUserAlt } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
+import Log from '../Components/Log'
 import Cart from '../Pages/Cart/Cart'
 
 const Navbar = () => {
@@ -33,9 +33,7 @@ const Navbar = () => {
         <Flex w="50%" justifyContent="center">
           <Cart />
           <Link to="/">
-            <Text mx="10px" fontSize="1.5rem">
-              <FaUserAlt />
-            </Text>
+            <Log />
           </Link>
         </Flex>
       </Flex>

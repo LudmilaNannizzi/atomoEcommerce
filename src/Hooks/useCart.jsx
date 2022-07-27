@@ -23,14 +23,14 @@ const useCart = () => {
   }
 
   const deleteItemCart = (id) => {
-    setCart(cart.filter((info) => info.id !== id))
+    setCart(cart.filter((product) => product.id !== id))
   }
   const deleteAllProducts = () => {
     setCart([])
   }
 
   const totalCart = cart.reduce(
-    (acc, product) => acc + product.price * product.cantidad,
+    (acc, product) => acc + product.attributes.price * product.cantidad,
     0
   )
 

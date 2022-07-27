@@ -12,8 +12,11 @@ import {
   InputRightElement,
 } from '@chakra-ui/react'
 import { yupResolver } from '@hookform/resolvers/yup'
+import axios from 'axios'
 import { useForm } from 'react-hook-form'
 import { object, string } from 'yup'
+
+import useUser from '../Hooks/useUser'
 
 const userSchema = object({
   email: string().email().required('Debe ingresar su edad '),
@@ -26,7 +29,26 @@ const userSchema = object({
 const SingUpForm = () => {
   const [hiddenPass, setHiddenPass] = useState(false)
 
+  const { signIn } = useUser()
   const handleOnClick = () => setHiddenPass(!hiddenPass)
+
+  const onSubmit = ({ name, email, password }) => {
+    axios
+      .post(
+        'https://strapiecommerce-production-4615.up.railway.app/api/auth/local/register',
+        {
+          username: name,
+          email,
+          password,
+        }
+      )
+      .then((response) => {
+        signIn(response.data.user)
+      })
+      .catch((error) => {
+        console.log('An error occurred:', error.response)
+      })
+  }
 
   const {
     handleSubmit,
@@ -36,10 +58,6 @@ const SingUpForm = () => {
     resolver: yupResolver(userSchema),
   })
 
-  const onSubmit = ({ email, password, name }) =>
-    console.log(email, password, name)
-
-  console.log(errors)
   return (
     <Box w="350px" mt="30px">
       <form onSubmit={handleSubmit(onSubmit)}>
