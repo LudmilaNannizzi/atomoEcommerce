@@ -6,7 +6,7 @@ import ProductCheckOut from './ProductCheckOut'
 const CheckOut = () => {
   const { cart, totalCart } = useCart()
   return (
-    <Box h="100vh">
+    <Box h="100vh" w="100%">
       <Table variant="simple" size="lg" w="900px" mx="auto">
         <Thead>
           <Tr color="white">
@@ -29,8 +29,25 @@ const CheckOut = () => {
             <Th />
             <Th />
             <Th />
-            <Th color="teal.400">Total $</Th>
-            <Th color="teal.400"> {totalCart}</Th>
+            <Th color="teal.400">Total </Th>
+            <Th color="teal.400"> ${totalCart}</Th>
+          </Tr>
+          <Tr>
+            <Th />
+            <Th />
+            <Th />
+            <Th />
+            <Th />
+            <Th
+              color="teal.400"
+              textAlign="center"
+              _hover={{
+                background: 'gray.900',
+                color: 'teal.500',
+              }}
+            >
+              Finalizar comprar
+            </Th>
           </Tr>
         </Tfoot>
       </Table>
