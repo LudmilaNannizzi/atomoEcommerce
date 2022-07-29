@@ -44,8 +44,8 @@ const Shop = () => {
     setFilterCat(e.target.value)
     console.log(setFilterCat)
   }
-  const handlerChangeStock = () => {
-    setFilterStock(1)
+  const handlerChangeStock = (e) => {
+    setFilterStock(e.target.checked ? 1 : 0)
   }
   const handlerChangeGtePrice = (e) => {
     setFilterGtePrice(e.target.value)

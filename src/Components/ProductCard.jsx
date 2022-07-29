@@ -54,8 +54,8 @@ const ProductCard = ({ info }) => {
           <Text>Agregar al carrito </Text>
         </Button>
         <Button
-          variant="outline"
           onClick={() => addFav(info)}
+          variant="outline"
           _hover={{
             background: 'black',
             color: 'teal.500',

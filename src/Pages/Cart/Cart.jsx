@@ -28,7 +28,7 @@ const Cart = () => {
       </Flex>
       <Drawer isOpen={isOpen} size="sm" placement="right" onClose={onClose}>
         <DrawerOverlay />
-        <DrawerContent>
+        <DrawerContent bgColor="#202124" color="#e1e1e3">
           <DrawerCloseButton />
           <DrawerHeader>Carrito</DrawerHeader>
           {!!cart.length || (
@@ -47,15 +47,19 @@ const Cart = () => {
               <DrawerFooter display="flex" flexDir="column">
                 <Text>Total: $ {totalCart}</Text>
 
-                <Button mb={3} w="full" colorScheme="facebook">
+                <Button mb={3} w="full" colorScheme="teal">
                   <Link to="checkOut"> Comprar</Link>
                 </Button>
 
                 <Button
-                  variant="outline"
                   mb={3}
                   w="full"
                   onClick={deleteAllProducts}
+                  variant="outline"
+                  _hover={{
+                    background: 'black',
+                    color: 'teal.500',
+                  }}
                 >
                   Vaciar Carrito
                 </Button>

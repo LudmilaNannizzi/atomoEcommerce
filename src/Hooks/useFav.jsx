@@ -21,7 +21,6 @@ const useFav = () => {
       )
     }
   }
-  console.log(fav)
 
   const deleteItemFav = (id) => {
     setFav(fav.filter((product) => product.id !== id))

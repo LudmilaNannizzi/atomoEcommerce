@@ -28,6 +28,11 @@ const Product = ({ product }) => {
       <IconButton
         icon={<BsFillTrashFill />}
         onClick={() => deleteItemCart(product.id)}
+        variant="outline"
+        _hover={{
+          background: 'black',
+          color: 'teal.500',
+        }}
       />
     </Flex>
   )
