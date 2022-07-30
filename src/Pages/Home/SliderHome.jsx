@@ -71,8 +71,12 @@ const SliderHome = () => {
       {/* Left Icon */}
       <IconButton
         aria-label="left-arrow"
-        variant="ghost"
         position="absolute"
+        variant="outline"
+        _hover={{
+          background: 'black',
+          color: 'teal.500',
+        }}
         left={side}
         top={top}
         transform={'translate(0%, -50%)'}
@@ -84,7 +88,11 @@ const SliderHome = () => {
       {/* Right Icon */}
       <IconButton
         aria-label="right-arrow"
-        variant="ghost"
+        variant="outline"
+        _hover={{
+          background: 'black',
+          color: 'teal.500',
+        }}
         position="absolute"
         right={side}
         top={top}

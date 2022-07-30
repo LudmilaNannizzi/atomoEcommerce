@@ -51,27 +51,12 @@ const useGetWithFilters = (url) => {
         `
       )
       setData(response.data.data)
+      setPages(response.data.meta.pagination.pageCount)
 
       setIsLoading(false)
     }
     getProdcts()
   }, [filterTitle, filterCat, filterStock, filterLtePrice, page])
-
-  useEffect(() => {
-    const getPages = async () => {
-      const response =
-        await axios.get(`${URLBASE}&pagination[page]=${page}&pagination[pageSize]=8${getFilterTitle(
-          filterTitle
-        )}${getFilterCat(filterCat)}${getFilterStock(
-          filterStock
-        )}${getFilterLtePrice(filterLtePrice)}${getFilterGtePrice(
-          filterGtePrice
-        )}
-        `)
-      setPages(response.data.meta.pagination.pageCount)
-    }
-    getPages()
-  }, [data])
 
   return {
     data,

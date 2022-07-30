@@ -70,7 +70,8 @@ const Shop = () => {
           mr="10px"
           variant="outline"
           onChange={handlerChangeCat}
-          bgColor="#202124"
+          bgColor="none"
+          color="black"
         >
           <option value="espejos">Espejos</option>
           <option value="luces">Luces</option>

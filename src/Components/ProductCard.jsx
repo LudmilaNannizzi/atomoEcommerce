@@ -16,7 +16,7 @@ const ProductCard = ({ info }) => {
       h="410px"
       p="20px"
       my="15px"
-      borderRadius="10px"
+      borderRadius="5px"
       alignContent="space-between"
       bgColor="rgb(43, 44, 48, 0.5)"
     >
@@ -28,6 +28,7 @@ const ProductCard = ({ info }) => {
           alignContent="space-between"
         >
           <Image
+            mx="auto"
             src={product.image.data.attributes.url}
             alt=""
             boxSize="200px"
