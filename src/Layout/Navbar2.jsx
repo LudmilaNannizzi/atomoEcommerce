@@ -1,4 +1,4 @@
-import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
+import { CloseIcon } from '@chakra-ui/icons'
 import {
   Box,
   Flex,
@@ -11,6 +11,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react'
 import { AiFillFire } from 'react-icons/ai'
+import { FaBars } from 'react-icons/fa'
 import { NavLink as ReachLink } from 'react-router-dom'
 
 import Log from '../Components/Log'
@@ -44,8 +45,8 @@ const Navbar2 = () => {
     <Box borderBottom="1px solid" bgColor="black" color="white">
       <Flex minH="4rem" alignItems={'center'} justifyContent={'space-between'}>
         <IconButton
-          size={'md'}
-          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+          size="lg"
+          icon={isOpen ? <CloseIcon /> : <FaBars fontSize="1.5rem" />}
           aria-label={'Open Menu'}
           variant="link"
           color="white"
