@@ -56,7 +56,6 @@ const ProductFavs = ({ product }) => {
           icon={<BsFillTrashFill />}
           onClick={() => deleteItemFav(product.id)}
           variant="outline"
-          onClick={() => addFav(info)}
           _hover={{
             background: 'black',
             color: 'teal.500',
@@ -68,7 +67,6 @@ const ProductFavs = ({ product }) => {
           icon={<FaShoppingCart />}
           onClick={() => addProduct(product)}
           variant="outline"
-          onClick={() => addFav(info)}
           _hover={{
             background: 'black',
             color: 'teal.500',

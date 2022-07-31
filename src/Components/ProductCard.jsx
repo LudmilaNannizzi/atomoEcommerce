@@ -14,8 +14,8 @@ const ProductCard = ({ info }) => {
     <GridItem
       w="250px"
       h="410px"
-      p="20px"
       my="15px"
+      pb="20px"
       borderRadius="5px"
       alignContent="space-between"
       bgColor="rgb(43, 44, 48, 0.5)"
@@ -28,24 +28,28 @@ const ProductCard = ({ info }) => {
           alignContent="space-between"
         >
           <Image
-            mx="auto"
             src={product.image.data.attributes.url}
             alt=""
-            boxSize="200px"
+            boxSize="250px"
+            borderRadius="5px 5px 0 0"
           />
-          <Heading size="md">{product.title}</Heading>
-          <Text>$ {product.price}</Text>
-          <Text>Stock disponible {product.stock}</Text>
+          <Box px="20px" pt="8px">
+            <Heading size="md">{product.title}</Heading>
+            <Text>$ {product.price}</Text>
+            <Text>Stock disponible {product.stock}</Text>
+          </Box>
         </Box>
       </Link>
       <Box
         h="30%"
+        p="20px"
         display="flex"
         justifyContent="space-between"
         alignItems="center"
       >
         <Button
           variant="outline"
+          mr="5px"
           _hover={{
             background: 'black',
             color: 'teal.500',

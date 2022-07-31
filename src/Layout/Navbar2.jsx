@@ -7,7 +7,6 @@ import {
   IconButton,
   Link,
   Stack,
-  Text,
   useDisclosure,
 } from '@chakra-ui/react'
 import { AiFillFire } from 'react-icons/ai'
@@ -31,7 +30,9 @@ const NavLink = ({ text, link }) => {
       to={link}
       rounded={'md'}
       _hover={{ color: 'teal' }}
-      style={({ isActive }) => (isActive ? { color: 'teal' } : undefined)}
+      style={({ isActive }) =>
+        isActive ? { color: 'teal', boder: 'none' } : undefined
+      }
     >
       {text}
     </Link>

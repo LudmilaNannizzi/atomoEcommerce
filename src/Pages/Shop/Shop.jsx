@@ -1,6 +1,6 @@
 import { ArrowBackIcon, ArrowForwardIcon, Search2Icon } from '@chakra-ui/icons'
 import {
-  Grid,
+  SimpleGrid,
   Box,
   Spinner,
   FormControl,
@@ -109,15 +109,15 @@ const Shop = () => {
           />
         </FormControl>
       </Box>
-      <Box w="100%" my="30px">
+      <Box w="100%" my="70px">
         {isLoading && <Spinner mx="50%" my="50px" size="xl" />}
         {isLoading || (
-          <Grid templateColumns="repeat(4, 1fr)" mx="auto" w="90%">
+          <SimpleGrid minChildWidth="250px" spacing="30px" mx="auto" w="70%">
             {products &&
               products.map((product) => {
                 return <ProductCard info={product} key={product.id} />
               })}
-          </Grid>
+          </SimpleGrid>
         )}
       </Box>
       <Flex justifyContent="center" m="50px">

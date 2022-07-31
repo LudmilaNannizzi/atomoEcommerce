@@ -23,7 +23,7 @@ const getFilterStock = (filterStock) => {
 
 const useGetWithFilters = (url) => {
   const [data, setData] = useState(null)
-  const [pages, setPages] = useState(null)
+  const [meta, setMeta] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
   const [filterTitle, setFilterTitle] = useState('')
   const [filterCat, setFilterCat] = useState('')
@@ -35,7 +35,7 @@ const useGetWithFilters = (url) => {
   const prevPage = () => setPage(page - 1)
   const nextPage = () => setPage(page + 1)
   const disablePrevPage = page === 1
-  const disableNextPage = page === pages
+  const disableNextPage = page === meta
 
   useEffect(() => {
     setIsLoading(true)
@@ -51,12 +51,11 @@ const useGetWithFilters = (url) => {
         `
       )
       setData(response.data.data)
-      setPages(response.data.meta.pagination.pageCount)
-
+      setMeta(response.data.meta.pagination.pageCount)
       setIsLoading(false)
     }
     getProdcts()
-  }, [filterTitle, filterCat, filterStock, filterLtePrice, page])
+  }, [filterTitle, filterCat, filterStock, filterLtePrice, page, meta])
 
   return {
     data,
