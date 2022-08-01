@@ -18,7 +18,7 @@ import Cart from '../Pages/Cart/Cart'
 
 const Links = [
   { label: 'Tienda', url: '/shop' },
-  { label: 'Nosotros', url: '/nosotros' },
+  { label: 'Nosotros', url: '/aboutUs' },
 ]
 
 const NavLink = ({ text, link }) => {

@@ -8,21 +8,9 @@ import useUser from '../Hooks/useUser'
 import authModaState from '../Recoil/authModalAtom'
 
 const Log = () => {
-  const { signOut, user } = useUser()
-  const [setShowModal] = useRecoilState(authModaState)
+  const { signOut } = useUser()
+  /* const [setShowModal] = useRecoilState(authModaState) */
 
-  if (!user) {
-    return (
-      <Button
-        colorScheme="black"
-        onClick={() => {
-          setShowModal(true)
-        }}
-      >
-        <FaUserAlt mx="10px" fontSize="1.5rem" />
-      </Button>
-    )
-  }
   return (
     <Menu>
       <MenuButton

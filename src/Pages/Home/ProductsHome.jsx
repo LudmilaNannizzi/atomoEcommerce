@@ -1,4 +1,4 @@
-import { Grid, Box, Spinner } from '@chakra-ui/react'
+import { SimpleGrid, Box, Spinner } from '@chakra-ui/react'
 
 import ProductCard from '../../Components/ProductCard'
 import useGet from '../../Hooks/useGet'
@@ -14,17 +14,12 @@ const ProductsHome = () => {
       <Box w="100%" my="30px">
         {isLoading && <Spinner mx="50%" my="50px" size="xl" />}
         {isLoading || (
-          <Grid
-            templateColumns="repeat(4, 1fr)"
-            mx="auto"
-            w="90%"
-            justify="center"
-          >
+          <SimpleGrid minChildWidth="250px" spacing="30px" mx="auto" w="70%">
             {products &&
               products.map((product) => {
                 return <ProductCard info={product} key={product.id} />
               })}
-          </Grid>
+          </SimpleGrid>
         )}
       </Box>
     </>
