@@ -2,14 +2,11 @@ import { ChevronDownIcon } from '@chakra-ui/icons'
 import { Button, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react'
 import { FaUserAlt } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { useRecoilState } from 'recoil'
 
 import useUser from '../Hooks/useUser'
-import authModaState from '../Recoil/authModalAtom'
 
 const Log = () => {
   const { signOut } = useUser()
-  /* const [setShowModal] = useRecoilState(authModaState) */
 
   return (
     <Menu>

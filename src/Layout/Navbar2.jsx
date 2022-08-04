@@ -13,7 +13,7 @@ import { AiFillFire } from 'react-icons/ai'
 import { FaBars } from 'react-icons/fa'
 import { NavLink as ReachLink } from 'react-router-dom'
 
-import Log from '../Components/Log'
+import Forms from '../Components/Forms'
 import Cart from '../Pages/Cart/Cart'
 
 const Links = [
@@ -77,10 +77,8 @@ const Navbar2 = () => {
               />
             ))}
           </HStack>
-          {/* Carrito */}
           <Cart />
-          {/* Menu del usuario */}
-          <Log />
+          <Forms />
         </Flex>
       </Flex>
 

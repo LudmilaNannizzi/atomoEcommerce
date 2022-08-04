@@ -48,7 +48,7 @@ const FormLogIn = () => {
         }
       )
       .then((response) => {
-        signIn(response.data.user)
+        signIn({ ...response.data.user, jwt: response.data.jwt })
       })
       .catch((error) => {
         console.log('An error occurred:', error.response)

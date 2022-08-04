@@ -46,7 +46,7 @@ const CheckOut = () => {
                 color: 'teal.500',
               }}
             >
-              Finalizar comprar
+              Pepe
             </Th>
           </Tr>
         </Tfoot>

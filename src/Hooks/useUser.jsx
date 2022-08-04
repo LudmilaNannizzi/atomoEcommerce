@@ -7,7 +7,7 @@ const useLogIn = () => {
 
   const signIn = (data) => setUser(data)
 
-  const signOut = () => setUser({})
+  const signOut = () => setUser(null)
 
   return {
     user,

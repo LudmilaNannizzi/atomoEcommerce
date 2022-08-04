@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Layout from './Layout/Layout'
 import AboutUs from './Pages/AboutUs/AboutUs'
 import Cart from './Pages/Cart/Cart'
-import CheckOut from './Pages/CheckOut/CheckOut'
+import MyOrders from './Pages/CheckOut/MyOrders'
 import Detail from './Pages/Detail/Detail'
 import Favs from './Pages/Favs/Favs'
 import Home from './Pages/Home/Home'
@@ -21,7 +21,7 @@ const App = () => {
           <Route path="shop/:id" element={<Detail />} />
           <Route path="aboutUs" element={<AboutUs />} />
           <Route path="cart" element={<Cart />} />
-          <Route path="checkOut" element={<CheckOut />} />
+          <Route path="checkOut" element={<MyOrders />} />
           <Route path="/favs" element={<Favs />} />
           <Route path="/my-account" element={<MyAccount />} />
           <Route path="*" element={<NotFound />} />
