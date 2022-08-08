@@ -12,7 +12,7 @@ const MyAccount = () => {
           <Heading size="md">¡Hola, {user.username}! </Heading>
           <Text my="15px">
             Desde esta sección vas a poder acceder de manera instanteanea a la
-            información y actividades recientes
+            información y actividades recientes.
           </Text>
           <Heading>Información de la cuenta </Heading>
           <Divider my="15px" />
