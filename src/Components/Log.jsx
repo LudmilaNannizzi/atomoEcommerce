@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import useUser from '../Hooks/useUser'
 
 const Log = () => {
-  const { signOut } = useUser()
+  const { signOut, user } = useUser()
 
   return (
     <Menu>
@@ -18,16 +18,20 @@ const Log = () => {
         <FaUserAlt mx="10px" fontSize="1.5rem" />
       </MenuButton>
 
-      <MenuList bgColor="black">
+      <MenuList bgColor="black" color="teal">
         <Link to="/my-account">
-          <MenuItem>Mis datos</MenuItem>
+          <MenuItem>{user.username}</MenuItem>
         </Link>
-        <MenuItem>Mis pedidos</MenuItem>
+        <Link to="/orders">
+          <MenuItem>Mis pedidos</MenuItem>
+        </Link>
+
         <Link to="favs">
           <MenuItem>Favoritos</MenuItem>
         </Link>
-
-        <MenuItem onClick={() => signOut(null)}>Salir</MenuItem>
+        <Link to="/">
+          <MenuItem onClick={() => signOut(null)}>Salir</MenuItem>
+        </Link>
       </MenuList>
     </Menu>
   )

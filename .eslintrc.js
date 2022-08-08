@@ -17,6 +17,7 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
+    'react/no-children-prop': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     'react/self-closing-comp': 'error',

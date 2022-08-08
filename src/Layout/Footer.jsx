@@ -7,6 +7,7 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react'
+import { AiFillFire } from 'react-icons/ai'
 import { DiTerminal } from 'react-icons/di'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
@@ -37,13 +38,13 @@ const Footer = () => {
           </ul>
           <Link to="aboutUs">
             <Heading as="h4" size="sm" px="15px">
-              Nosotros
+              | Sobre átomoLab
             </Heading>
           </Link>
         </Flex>
         <Link to="/">
-          <Heading as="h4" size="sm">
-            Logo
+          <Heading as="h4" size="xl">
+            <AiFillFire />
           </Heading>
         </Link>
       </Stack>

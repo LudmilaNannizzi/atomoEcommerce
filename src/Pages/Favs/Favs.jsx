@@ -8,7 +8,7 @@ const Favs = () => {
   const { fav, deleteAllProductsFav } = useFav('products')
 
   return (
-    <Flex>
+    <Flex minH="100vh">
       <Aside />
       <Box my="30px" p="20px">
         <Heading>Favoritos </Heading>
@@ -16,7 +16,7 @@ const Favs = () => {
           <ProductFavs key={info.id} product={info} />
         ))}
         <Button
-          w="600px"
+          w={{ base: '400px', md: '550px' }}
           m="50px"
           variant="outline"
           mb={3}

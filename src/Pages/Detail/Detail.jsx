@@ -4,7 +4,7 @@ import {
   Heading,
   Spinner,
   Text,
-  Wrap,
+  Flex,
   WrapItem,
 } from '@chakra-ui/react'
 import { useParams } from 'react-router-dom'
@@ -20,12 +20,12 @@ const Detail = () => {
 
   if (isLoading) return <Spinner mx="50%" my="50px" size="xl" />
   return (
-    <Wrap>
-      <WrapItem w="45%" p="50px">
+    <Flex flexDirection={{ base: 'column', md: 'row' }} minH="100vh">
+      <WrapItem w={{ base: '90%', md: '50%' }} p="50px">
         <img src={product?.attributes.image.data.attributes.url} />
       </WrapItem>
       <WrapItem
-        w="50%"
+        w={{ base: '90%', md: '40%' }}
         p="40px"
         display="flex"
         flexDirection="column"
@@ -43,17 +43,29 @@ const Detail = () => {
           <Button
             mb={3}
             w="full"
-            colorScheme="facebook"
+            variant="outline"
+            _hover={{
+              background: 'black',
+              color: 'teal.500',
+            }}
             onClick={() => addProduct(product)}
           >
             Agregar al carrito
           </Button>
-          <Button variant="outline" mb={3} w="full">
+          <Button
+            variant="outline"
+            _hover={{
+              background: 'black',
+              color: 'teal.500',
+            }}
+            mb={3}
+            w="full"
+          >
             Agregar a Favoritos
           </Button>
         </Box>
       </WrapItem>
-    </Wrap>
+    </Flex>
   )
 }
 export default Detail

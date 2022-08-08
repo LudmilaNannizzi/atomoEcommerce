@@ -47,7 +47,7 @@ const Cart = () => {
               <DrawerFooter display="flex" flexDir="column">
                 <Text>Total: $ {totalCart}</Text>
 
-                <Button mb={3} w="full" colorScheme="teal">
+                <Button mb={3} w="full" colorScheme="teal" onClose={onClose}>
                   <Link to="checkOut"> Comprar</Link>
                 </Button>
 

@@ -55,7 +55,15 @@ const useGetWithFilters = (url) => {
       setIsLoading(false)
     }
     getProdcts()
-  }, [filterTitle, filterCat, filterStock, filterLtePrice, page, meta])
+  }, [
+    filterTitle,
+    filterCat,
+    filterStock,
+    filterGtePrice,
+    filterLtePrice,
+    page,
+    meta,
+  ])
 
   return {
     data,
@@ -68,6 +76,7 @@ const useGetWithFilters = (url) => {
     setFilterStock,
     setFilterLtePrice,
     setFilterGtePrice,
+    setPage,
     prevPage,
     nextPage,
     disablePrevPage,

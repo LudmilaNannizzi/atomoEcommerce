@@ -32,6 +32,7 @@ const Shop = () => {
     setFilterStock,
     setFilterLtePrice,
     setFilterGtePrice,
+    setPage,
     prevPage,
     nextPage,
     disablePrevPage,
@@ -39,24 +40,35 @@ const Shop = () => {
   } = useGetWithFilters('product')
   const handlerChangeTitle = (e) => {
     setFilterTitle(e.target.value)
+    setPage(1)
   }
   const handlerChangeCat = (e) => {
     setFilterCat(e.target.value)
+    setPage(1)
     console.log(setFilterCat)
   }
   const handlerChangeStock = (e) => {
     setFilterStock(e.target.checked ? 1 : 0)
+    setPage(1)
   }
   const handlerChangeGtePrice = (e) => {
     setFilterGtePrice(e.target.value)
+    setPage(1)
   }
   const handlerChangeLtePrice = (e) => {
     setFilterLtePrice(e.target.value)
+    setPage(1)
   }
 
   return (
-    <>
-      <Box w="100%" h="120px" p="30px" display="flex" alignItems="flex-end">
+    <Box minH="100vh">
+      <Box
+        w="100%"
+        h="120px"
+        p="30px"
+        display={{ base: 'none', md: 'flex' }}
+        alignItems="flex-end"
+      >
         <InputGroup size="md" w="500px" mr="10px" onChange={handlerChangeTitle}>
           <InputLeftElement
             pointerEvents="none"
@@ -147,7 +159,7 @@ const Shop = () => {
           <ArrowForwardIcon />
         </Button>
       </Flex>
-    </>
+    </Box>
   )
 }
 

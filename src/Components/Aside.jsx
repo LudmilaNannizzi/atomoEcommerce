@@ -14,7 +14,13 @@ import useUser from '../Hooks/useUser'
 const Aside = () => {
   const { signOut } = useUser()
   return (
-    <TableContainer w="300px" boxShadow="dark-lg" h="255px" m="50px">
+    <TableContainer
+      w="300px"
+      boxShadow="dark-lg"
+      h="255px"
+      m="50px"
+      display={{ base: 'none', md: 'flex' }}
+    >
       <Table variant="outline">
         <Thead bgColor="rgb(43, 44, 48, 0.5)" w="100%">
           <Tr>

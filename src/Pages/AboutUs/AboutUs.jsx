@@ -1,12 +1,13 @@
-import { Box } from '@chakra-ui/react'
+import { Box, Heading, Text } from '@chakra-ui/react'
 
-import FormLogIn from '../../Components/LogInForm'
-import SingUpForm from '../../Components/SingUpForm'
 const AboutUs = () => {
   return (
-    <Box bgColor="black">
-      <FormLogIn />
-      <SingUpForm />
+    <Box minH="100vh" p={{ base: '20px', md: '100px' }}>
+      <Heading size="lg"> Sobre Átomo Lab</Heading>
+      <Text>
+        Átomo Lab se creó como un espacio de experimentación lumínica diferentes
+        objetos cotidianos.
+      </Text>
     </Box>
   )
 }

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const NotFound = () => {
   return (
-    <Box w="50%" mx="auto" h="100vh">
+    <Box w="50%" mx="auto" minH="100vh">
       <Heading size="3xl" mt="100px">
         Oops!
       </Heading>

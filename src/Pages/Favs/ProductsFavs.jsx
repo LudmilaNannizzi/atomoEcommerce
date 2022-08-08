@@ -20,7 +20,7 @@ const ProductFavs = ({ product }) => {
   return (
     <Flex
       m="50px"
-      w="550px"
+      w={{ base: '400px', md: '550px' }}
       h="120px"
       p="20px"
       borderRadius="10px"

@@ -12,10 +12,9 @@ import {
 } from '@chakra-ui/react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-import { useSetRecoilState } from 'recoil'
 
 import Forms from '../../Components/Forms'
-import useCart from '../../hooks/useCart'
+import useCart from '../../Hooks/useCart'
 import useUser from '../../hooks/useUser'
 import ProductCheckOut from './ProductCheckOut'
 
@@ -26,10 +25,9 @@ export const MyOrders = () => {
   const toast = useToast({
     variant: 'top-accent',
     isClosable: true,
-    duration: 3000,
+    duration: 6000,
   })
   const navigate = useNavigate()
-  console.log(user)
 
   const handleOnClick = async () => {
     setLoading(true)
@@ -51,16 +49,15 @@ export const MyOrders = () => {
           }
         )
         toast({
-          title: 'Compra realizada con exito',
+          title: 'Compra realizada con éxito',
           status: 'success',
         })
         deleteAllProducts()
-        navigate('/')
+        navigate('/orders')
       } catch (error) {
-        console.log(error)
         toast({
           title: 'Error',
-          description: 'Ups algo salio mal',
+          description: 'Ups! algo salio mal',
           status: 'error',
         })
       }

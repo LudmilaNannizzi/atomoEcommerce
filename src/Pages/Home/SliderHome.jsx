@@ -52,11 +52,10 @@ const SliderHome = () => {
   return (
     <Box
       position={'relative'}
-      height={'600px'}
+      h={{ base: '300px', md: '600px' }}
       width={'full'}
       overflow={'hidden'}
     >
-      {/* CSS files for react-slick */}
       <link
         rel="stylesheet"
         type="text/css"
@@ -68,7 +67,7 @@ const SliderHome = () => {
         type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
       />
-      {/* Left Icon */}
+
       <IconButton
         aria-label="left-arrow"
         position="absolute"
@@ -85,7 +84,7 @@ const SliderHome = () => {
       >
         <BiLeftArrowAlt size="40px" />
       </IconButton>
-      {/* Right Icon */}
+
       <IconButton
         aria-label="right-arrow"
         variant="outline"
@@ -102,7 +101,7 @@ const SliderHome = () => {
       >
         <BiRightArrowAlt size="40px" />
       </IconButton>
-      {/* Slider */}
+
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {cards.map((card, index) => (
           <Box
@@ -113,7 +112,6 @@ const SliderHome = () => {
             backgroundSize="cover"
             backgroundImage={`url(${card.image})`}
           >
-            {/* This is the block you need to change, to customize the caption */}
             <Container size="container.lg" height="600px" position="relative">
               <Stack
                 spacing={6}

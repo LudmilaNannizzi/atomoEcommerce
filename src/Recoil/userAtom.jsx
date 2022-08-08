@@ -20,7 +20,6 @@ export const userAuthState = atom({
   default: null,
   effects: [localStorageEffect('user')],
 })
-
 export const userLogedState = selector({
   key: 'userLoged',
   get: ({ get }) => {
