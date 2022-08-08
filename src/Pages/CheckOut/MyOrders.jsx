@@ -15,7 +15,7 @@ import { useNavigate } from 'react-router-dom'
 
 import Forms from '../../Components/Forms'
 import useCart from '../../Hooks/useCart'
-import useUser from '../../hooks/useUser'
+import useUser from '../../Hooks/useUser'
 import ProductCheckOut from './ProductCheckOut'
 
 export const MyOrders = () => {
