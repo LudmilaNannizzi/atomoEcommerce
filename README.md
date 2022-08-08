@@ -6,7 +6,7 @@
 
 Este proyecto fue creado en React y se utilizaron las librerías Chakra Ui, Yup, React Hook Form y Recoil. Así mismo, se creo una API con Strapi para la gestión y consumo de información.
 
-### [Deploy 🔗](https://atomolab.netlify.app/)
+### [Deploy 🔗](https://atomolab.netlify.app/){:target="\_blank"}
 
 ### Funcionalidades 📝
 
